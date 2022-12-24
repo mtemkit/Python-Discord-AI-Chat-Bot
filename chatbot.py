@@ -2,6 +2,13 @@ import os
 import discord
 import requests
 import firebase_admin
+from revChatGPT.revChatGPT import Chatbot
+
+
+#chatbot = Chatbot({})
+
+#chatbot.get_chat_response(prompt, output="text") #output=stream uses async generator
+
 
 # Initialize Firebase
 cred = firebase_admin.credentials.ApplicationDefault()
@@ -17,6 +24,12 @@ client = discord.Client(intents=discord.Intents.default())
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
+    channel = client.get_channel(1056001153747390587)
+
+    # Send the message to the channel
+    await channel.send('Hello, world!')
+
+
 
 @client.event
 async def on_message(message):

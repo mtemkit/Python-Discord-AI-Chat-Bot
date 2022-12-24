@@ -36,11 +36,12 @@ YAML
 
 Store the discord and open ai key in a ".env". sampleEnvVars shows the required env variables for this file.
 
-To run the bot, the following libraries are required:
+To run the bot, the following libraries are required (see installed libraries using "pip freeze"):
 pip install firebase-admin
 pip install firebase-cli
 pip install discord
 pip install requests
+pip install revChatGPT
 
 The bot is then ran using: chatbot.py
 
