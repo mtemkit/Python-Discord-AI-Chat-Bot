@@ -1,24 +1,14 @@
 import os
 import discord
-import dotenv
 import requests
 import firebase_admin
-from firebase_admin import credentials
 
-dotenv.load_dotenv()
-
-cred = credentials.Certificate('path/to/serviceAccountKey.json')
+# Initialize Firebase
+cred = firebase_admin.credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred)
 
-"""
-from firebase_admin import db
-
-# Get a reference to the database
-database = db.reference()
-
-# Read data from the database
-data = database.get()
-"""
+# Get the OpenAI API key from the environment variables
+api_key = os.environ['CHATGPT_API_KEY']
 
 client = discord.Client()
 
@@ -32,9 +22,9 @@ async def on_message(message):
         return
 
     if message.content.startswith('!prompt'):
+        # Set the prompt and maximum number of tokens
         prompt = 'What is your favorite color?'
         max_tokens = 256
-        api_key = os.getenv('CHATGPT_API_KEY')
 
         headers = {
             'Content-Type': 'application/json',
@@ -46,8 +36,11 @@ async def on_message(message):
             'max_tokens': max_tokens,
         }
 
+        # Send the request to the OpenAI API
         response = requests.post('https://api.openai.com/v1/chatgpt/prompt', headers=headers, json=data)
         response_text = response.json()['text']
         await message.channel.send(response_text)
 
-client.run(os.getenv('DISCORD_BOT_TOKEN'))
+# Get the Discord bot token from the environment variables
+bot_token = os.environ['DISCORD_BOT_TOKEN']
+client.run(bot_token)

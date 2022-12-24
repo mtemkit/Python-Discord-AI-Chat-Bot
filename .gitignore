@@ -2,3 +2,6 @@
 .vscode
 service.json
 *.log
+service.json
+serviceAccountKey.json
+.firebase

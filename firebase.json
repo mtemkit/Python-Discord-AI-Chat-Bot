@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "default",
+    "predeploy": "echo 'Setting environment variables...' && firebase functions:config:set chatgpt.api_key=$CHATGPT_API_KEY discord.bot_token=$DISCORD_BOT_TOKEN",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

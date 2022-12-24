@@ -1,0 +1,4 @@
+CHATGPT_API_KEY=your_api_key
+DISCORD_BOT_TOKEN=your_bot_token
+FIREBASE_TOKEN=your_firebase_token
+FIREBASE_SERVICE_ACCOUNT_CHATBOIGPTAI=your_service_json
