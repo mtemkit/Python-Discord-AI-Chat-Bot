@@ -19,6 +19,12 @@ jobs:
           echo "Setting environment variables..."
           CHATGPT_API_KEY=${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN=${{ secrets.DISCORD_BOT_TOKEN }}
+      - name: Re-install Python Dependencies
+        run: |
+          pip install -r requirements.txt      
+      - name: Run Discord bot
+        run: |
+          python chatbot.py
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
       - name: Deploy to Firebase
@@ -27,9 +33,3 @@ jobs:
         run: |
           firebase use --token $FIREBASE_TOKEN
           firebase deploy --token $FIREBASE_TOKEN
-      - name: Re-install Python Dependencies
-        run: |
-          pip install -r requirements.txt      
-      - name: Run Discord bot
-        run: |
-          python chatbot.py
