@@ -22,5 +22,5 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
           pip install -r requirements.txt   
-          firebase use --only hosting --token $FIREBASE_TOKEN
-          firebase deploy --token $FIREBASE_TOKEN
+          firebase use --token $FIREBASE_TOKEN
+          firebase deploy --only hosting--token $FIREBASE_TOKEN
