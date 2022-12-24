@@ -1,7 +1,12 @@
 {
   "hosting": {
-    "functions": "functions",
-    "public": "public",
+    "public": ".",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "discord_bot"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
