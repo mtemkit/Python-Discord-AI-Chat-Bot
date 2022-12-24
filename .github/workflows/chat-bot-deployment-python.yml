@@ -21,6 +21,6 @@ jobs:
           CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
-          pip install -r requirements.txt   
+          pip install -r bot/requirements.txt   
           firebase use --token $FIREBASE_TOKEN
           firebase deploy --only functions --token $FIREBASE_TOKEN
