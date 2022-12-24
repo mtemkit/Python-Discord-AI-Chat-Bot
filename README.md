@@ -60,6 +60,9 @@ Make sure to Access Your Secret Keys:
 Secret Key Management: https://github.com/[username]/Python-Discord-AI-Chat-Bot/settings/secrets
 Replace "[username]" with your github username, such as "mtemkit". 
 
+Project Console: https://console.firebase.google.com/project/chatboigptai/overview
+Hosting URL: https://chatboigptai.web.app
+
 Note: YAML/yml file names for the github actions workflows can be renamed without affecting functionality but it's a good idea to give descriptive names that accurately reflect the purpose of the workflow.
 
 ### Extra Notes:
