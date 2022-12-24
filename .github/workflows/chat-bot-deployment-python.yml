@@ -13,12 +13,12 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt   
       - name: Run Discord bot
         env:
           CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
+          pip install -r requirements.txt   
           python chatbot.py
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
