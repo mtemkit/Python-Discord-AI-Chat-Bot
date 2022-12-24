@@ -18,13 +18,9 @@ jobs:
       - name: Deploy to Firebase
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        run: |
-          firebase use --token $FIREBASE_TOKEN
-          firebase deploy --token $FIREBASE_TOKEN
-      - name: Run Discord bot
-        env:
           CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
           pip install -r requirements.txt   
-          python chatbot.py
+          firebase use --token $FIREBASE_TOKEN
+          firebase deploy --only functions --token $FIREBASE_TOKEN

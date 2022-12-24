@@ -22,7 +22,9 @@ Discord, Open AI
 
 ### Hosting:
 
-FireBase Cloud w/ Github Actions 
+FireBase Cloud w/ Github Actions
+
+Note: It's possible to run the bot for up to 6 hours at a time for every git push using solely Github Actions while running the python chat bot file with a workflow. However, I have chosen to instead use Github actions for deployment and Firebase Cloud for continuous hosting. This also allows me to host a site with the bot and add information bout it.
 
 ### Languages Used for File Configuration:
 
