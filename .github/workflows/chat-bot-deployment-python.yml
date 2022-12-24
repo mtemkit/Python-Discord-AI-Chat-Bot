@@ -15,7 +15,7 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt   
       - name: Run Discord bot
-          env:
+        env:
           CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         run: |
