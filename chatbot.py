@@ -10,7 +10,9 @@ firebase_admin.initialize_app(cred)
 # Get the OpenAI API key from the environment variables
 api_key = os.environ['CHATGPT_API_KEY']
 
-client = discord.Client()
+#client = discord.Client()
+
+client = discord.Client(intents=discord.Intents.default())
 
 @client.event
 async def on_ready():

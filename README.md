@@ -41,7 +41,6 @@ pip install firebase-admin
 pip install firebase-cli
 pip install discord
 pip install requests
-pip install python-dotenv
 
 The bot is then ran using: chatbot.py
 
@@ -59,6 +58,8 @@ Get firebase_token using: firebase login:ci in terminal
 Make sure to Access Your Secret Keys:
 Secret Key Management: https://github.com/[username]/Python-Discord-AI-Chat-Bot/settings/secrets
 Replace "[username]" with your github username, such as "mtemkit". 
+
+Test in the console using: python chatbot.py
 
 Project Console: https://console.firebase.google.com/project/chatboigptai/overview
 Hosting URL: https://chatboigptai.web.app
