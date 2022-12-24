@@ -30,6 +30,8 @@ Discord, Open AI
 
 ### Set-Up Process:
 
+Store the discord and open ai key in a ".env". sampleEnvVars shows the required env variables for this file.
+
 To run the bot, the following libraries are required:
 pip install firebase-admin
 pip install firebase-cli
@@ -39,11 +41,18 @@ pip install python-dotenv
 
 The bot is then ran using: chat_bot.py
 
-Firebase hosting:
+Firebase Hosting:
 npm install -g firebase-tools
 firebase login --no-localhost
 firebase init
 firebase deploy
+
+If using windows, or windows subsystem for Linux, make sure to edit your system path variables:
+/mnt/c/Windows/system32;C:\Windows\System32
+
+Make sure to Access Your Secret Keys:
+Secret Key Management: https://github.com/[username]/Python-Discord-AI-Chat-Bot/settings/secrets
+Replace "[username]" with your github username, such as "mtemkit". 
 
 ### Extra Notes:
 
