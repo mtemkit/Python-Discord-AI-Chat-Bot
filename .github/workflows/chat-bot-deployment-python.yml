@@ -27,7 +27,9 @@ jobs:
         run: |
           firebase use --token $FIREBASE_TOKEN
           firebase deploy --token $FIREBASE_TOKEN
+      - name: Re-install Python Dependencies
+        run: |
+          pip install -r requirements.txt      
       - name: Run Discord bot
         run: |
-          pip install -r requirements.txt
           python chatbot.py
