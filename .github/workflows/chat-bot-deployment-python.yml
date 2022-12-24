@@ -19,6 +19,9 @@ jobs:
           echo "Setting environment variables..."
           CHATGPT_API_KEY=${{ secrets.CHATGPT_API_KEY }}
           DISCORD_BOT_TOKEN=${{ secrets.DISCORD_BOT_TOKEN }}
+      - name: Set up Firebase CLI
+        run: |
+          alias firebase="`npm config get prefix`/bin/firebase"
       - name: Deploy to Firebase
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
