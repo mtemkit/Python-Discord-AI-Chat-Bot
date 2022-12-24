@@ -15,7 +15,7 @@ cred = firebase_admin.credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred)
 
 # Get the OpenAI API key from the environment variables
-api_key = os.environ["${{ secrets.CHATGPT_API_KEY }}"]
+api_key = os.environ['CHATGPT_API_KEY']
 
 #client = discord.Client()
 
@@ -57,5 +57,5 @@ async def on_message(message):
         await message.channel.send(response_text)
 
 # Get the Discord bot token from the environment variables
-bot_token = os.environ['"${{ secrets.DISCORD_BOT_TOKEN }}"']
+bot_token = os.environ['DISCORD_BOT_TOKEN']
 client.run(bot_token)
