@@ -59,6 +59,6 @@ Replace "[username]" with your github username, such as "mtemkit".
 - The final image used to represent the chat bot was also chosen amongst several other images generated using one of OpenAi's models!
 
 <p align="left">
-  <img src="images/professor_chat_bot.png" width="800" height="1275" title="Chat Bot Representing Image">
+  <img src="images/professor_chat_bot.png" width="800" height="900" title="Chat Bot Representing Image">
 </p>
 
