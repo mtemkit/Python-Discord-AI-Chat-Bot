@@ -9,9 +9,9 @@ jobs:
       - name: Cancel in-progress runs
         if: github.event_name == 'push'
         run: |
-          curl -X DELETE \
+          curl --request DELETE \
             -H "Authorization: token ${GITHUB_TOKEN}" \
-            https://api.github.com/repos/mtemkit/Python-Discord-AI-Chat-Bot/actions/runs?event_
+            https://api.github.com/repos/${GITHUB_REPOSITORY/actions/runs?branch=${GITHUB_BRANCH}
 
   deploy:
     runs-on: ubuntu-latest
