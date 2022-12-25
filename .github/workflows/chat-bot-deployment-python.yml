@@ -3,6 +3,16 @@ name: Deploy with Github Actions
 on: [push]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel in-progress runs
+        uses: actions/cancel-queued-workflows@v1
+        with:
+          # This is optional. If not provided, all in-progress runs of the same workflow in the same branch will be cancelled.
+          branch: main
+
+jobs:
   deploy:
     runs-on: ubuntu-latest
     concurrency: 1
