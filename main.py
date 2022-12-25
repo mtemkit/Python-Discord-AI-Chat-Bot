@@ -4,7 +4,6 @@ import requests
 import json
 from flask import Flask
 
-
 # Get the OpenAI API key from the environment variables
 api_key = os.environ['CHATGPT_API_KEY']
 
