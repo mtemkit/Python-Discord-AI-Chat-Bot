@@ -2,12 +2,11 @@ name: Deploy with Github Actions
 
 on: [push]
 
-concurrency: 
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    concurrency: 1
+    cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
