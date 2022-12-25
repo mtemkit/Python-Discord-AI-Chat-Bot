@@ -9,6 +9,7 @@ jobs:
       - name: Cancel in-progress runs
         uses: actions/cancel-queued-workflows@v1
         with:
+          repository: mtemkit/Python-Discord-AI-Chat-Bot
           # This is optional. If not provided, all in-progress runs of the same workflow in the same branch will be cancelled.
           branch: main
 
