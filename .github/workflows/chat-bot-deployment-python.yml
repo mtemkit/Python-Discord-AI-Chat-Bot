@@ -11,7 +11,7 @@ jobs:
         run: |
           curl -X DELETE \
             -H "Authorization: token ${GITHUB_TOKEN}" \
-            https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs?branch=${GITHUB_BRANCH}
+            https://api.github.com/repos/mtemkit/Python-Discord-AI-Chat-Bot/actions/runs?event_
 
   deploy:
     runs-on: ubuntu-latest
