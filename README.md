@@ -71,7 +71,7 @@ https://github.com/[username]/Python-Discord-AI-Chat-Bot/settings/secrets
 
 ### Extra Notes:
 
-The final image used to represent the chat bot was also chosen out of several other images generated using one of OpenAi's models!
+The final image used to represent the chat bot was also chosen out of several other images generated using one of OpenAi's models! Feel free to look through them in the images folder.
 
 <p align="left">
   <img src="images/professor_chat_bot.png" width="800" height="800" title="Chat Bot Representing Image">
