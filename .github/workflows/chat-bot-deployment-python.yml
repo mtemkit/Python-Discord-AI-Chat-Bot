@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel in-progress runs
-        uses: actions/cancel-queued-workflows@v2
-        with:
-          repository: mtemkit/Python-Discord-AI-Chat-Bot
-          # This is optional. If not provided, all in-progress runs of the same workflow in the same branch will be cancelled.
-          branch: main
+        if: github.event_name == 'push'
+        run: |
+          curl -X DELETE \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
+            https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs?branch=${GITHUB_BRANCH}
 
   deploy:
     runs-on: ubuntu-latest
