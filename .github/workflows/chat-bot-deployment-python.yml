@@ -9,7 +9,7 @@ jobs:
       - name: Cancel in-progress runs
         if: github.event_name == 'push'
         run: |
-          curl --request DELETE \
+          curl -X DELETE \
             -H "Authorization: token ${GITHUB_TOKEN}" \
             https://api.github.com/repos/${GITHUB_REPOSITORY/actions/runs?branch=${GITHUB_BRANCH}
 
