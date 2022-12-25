@@ -12,7 +12,6 @@ jobs:
           # This is optional. If not provided, all in-progress runs of the same workflow in the same branch will be cancelled.
           branch: main
 
-jobs:
   deploy:
     runs-on: ubuntu-latest
     concurrency: 1
