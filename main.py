@@ -30,7 +30,7 @@ async def on_message(message):
 
     if message.content.startswith(''):
         # Set the prompt and maximum number of tokens
-        model = 'text-davinci-003'
+        model = 'text-babbage-001'
         
         # Extract the user's question from the message content
         #question = message.content[len('prompt'):].strip()

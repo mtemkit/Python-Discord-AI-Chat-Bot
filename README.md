@@ -22,15 +22,21 @@ Discord, Open AI
 
 ### Hosting:
 
-PythonAnywhere with Github Actions (in progress)
+Update: This bot will no longer be hosted indefinitely for public use. It will mainly be for testing the code. If you manage catch the bot a few hours after I update the code, I've opted to leave the bot live for up to six hours after each code update.
+
+PythonAnywhere with Github Actions (still updating only for testing purposes)
 
 ~~Firebase Cloud (previously)~~
 
 Considerations: 
 
-I am solely using github actions in the mean-time meaning that the bot may not always be live. It's possible to run the bot for up to six hours at a time with every git push using solely Github Actions while running the python chat bot file with a workflow. I also occasionally host the bot locally for testing purposes. 
+The bot should hypothetically be able to run indefinitely for free using PythonAnywhere hosting. However, the GPT-3 Davinci model (OpenAI's currently most powerful model besides ChatGPT) is starting to incur costs since I have ran out of credits so I will only be running the bot for testing purposes mainly using Github Actions. I have also opted to use the slightly weaker Babbage model for the chat bot to minimize these testing costs.
 
-However, you can eventually expect the bot to run continuously once I've switched from firebase to another free hosting service. The previous hosting service used for this project was Firebase Cloud with Github Actions for deployment but I found out that using Firebase Cloud Functions requires a pay-as-you-go plan so I've decided to delete the hosting files and functions and start over. At the moment, I've started looking into PythonAnywhere. 
+Therefore, for now, I will solely be using github actions meaning that the bot may not always be live. It's possible to run the bot for up to six hours at a time with every git push using solely Github Actions while running the python chat bot file with a workflow. I will also occasionally host the bot locally for testing purposes. Although hosting in this way is free, the API will still cost.
+
+~~However, you can eventually expect the bot to run continuously once I've switched from firebase to another free hosting service.~~ 
+
+The previous hosting service used for this project was Firebase Cloud with Github Actions for deployment but I found out that using Firebase Cloud Functions requires a pay-as-you-go plan so I've decided to delete the hosting files and functions and start over. At the moment, I've started looking into PythonAnywhere. I will add the code to enable hosting with this service but won't be implementing it until I can find a free and strong chatbot API that allows for a small number of users.
 
 ### Languages Used for Deployment:
 
@@ -48,9 +54,9 @@ Below is a typical interaction you could expect with the bot.
 
 ### Test it Yourself:
 
-(in progress - setting up hosting)
+~~Join the project discord to test it yourself: https://discord.gg/qV7rzjPZxV~~ (for cost reasons, it is only useable 6 hours after the code is updated)
 
-Join the project discord to test it yourself: https://discord.gg/qV7rzjPZxV
+OpenAI credits are used up and the bot is starting to incur costs. For now, I will only be running it for testing. I considered using GPT-2 to bypass this and just host the model since the small version is open-source and should be usable with free hosting, however, the strength of the model is a lot weaker than GPT-3's Davinci and Babbage models.
 
 ### Set-Up Process:
 
